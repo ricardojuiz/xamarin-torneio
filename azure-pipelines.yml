@@ -32,12 +32,3 @@ steps:
     ArtifactName: 'drop'
     publishLocation: 'Container'
 
-- task: AppCenterDistribute@3
-  inputs:
-    serverEndpoint: 'App Center'
-    appSlug: 'xamarin-torneio/xamarin-torneio'
-    appFile: '$(outputDirectory)/xamarin-torneio.apk'
-    symbolsOption: 'Android'
-    releaseNotesOption: 'file'
-    releaseNotesFile: 'CHANGELOG'
-    destinationType: 'groups'
