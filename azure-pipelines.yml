@@ -45,5 +45,6 @@ steps:
     appFile: '$(build.artifactStagingDirectory)/xamarin-torneio.apk'
     symbolsOption: 'Android'
     releaseNotesOption: 'file'
-    releaseNotesFile: 'CHANGE
+    releaseNotesFile: 'CHANGELOG'
+    destinationType: 'groups'
 
