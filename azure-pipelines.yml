@@ -32,5 +32,6 @@ steps:
     appSlug: 'xamarin-torneio/xamarin-torneio'
     appFile: 'xamarin-torneio.apk'
     symbolsOption: 'Android'
-    releaseNotesOption: 'input'
+    releaseNotesOption: 'file'
+    releaseNotesFile: 'CHANGELOG'
     destinationType: 'groups'
