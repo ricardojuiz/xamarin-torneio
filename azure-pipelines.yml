@@ -36,7 +36,7 @@ steps:
   inputs:
     serverEndpoint: 'App Center'
     appSlug: 'xamarin-torneio/xamarin-torneio'
-    appFile: 'xamarin-torneio.apk'
+    appFile: '$(outputDirectory)/xamarin-torneio.apk'
     symbolsOption: 'Android'
     releaseNotesOption: 'file'
     releaseNotesFile: 'CHANGELOG'
