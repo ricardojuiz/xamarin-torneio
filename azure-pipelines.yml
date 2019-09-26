@@ -42,7 +42,7 @@ steps:
   inputs:
     serverEndpoint: 'App Center'
     appSlug: 'xamarin-torneio/xamarin-torneio'
-    appFile: '$(build.artifactStagingDirectory)/xamarin-torneio.apk'
+    appFile: '$(build.artifactStagingDirectory)/br.com.colossusinformatica.gibis.tifa.apk'
     symbolsOption: 'Android'
     releaseNotesOption: 'file'
     releaseNotesFile: 'CHANGELOG'
