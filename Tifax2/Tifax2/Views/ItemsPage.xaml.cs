@@ -25,7 +25,20 @@ namespace TIFA.Views
             InitializeComponent();
 
             BindingContext = viewModel = new ItemsViewModel();
+
+#if DEBUG
+            var button = new Button()
+            {
+                Text = "Recalcular"
+               
+            };
+
+            button.Clicked += (a, b) => viewModel.RecalcularClassificacaoAsync();
+            container.Children.Insert(0, button);
+#endif
         }
+
+        
 
         async void OnItemSelected(object sender, SelectedItemChangedEventArgs args)
         {
@@ -36,7 +49,7 @@ namespace TIFA.Views
             await Navigation.PushAsync(new ItemDetailPage(new ItemDetailViewModel(item)));
 
             // Manually deselect item.
-            ItemsListView.SelectedItem = null;
+            //ItemsListView.SelectedItem = null;
         }
 
         async void AddItem_Clicked(object sender, EventArgs e)
@@ -50,6 +63,18 @@ namespace TIFA.Views
 
             if (viewModel.Items.Count == 0)
                 viewModel.LoadItemsCommand.Execute(null);
+
+            var p = Navigation.NavigationStack.FirstOrDefault(a => a.GetType() == typeof(VersionVerifiyPage));
+
+            if (p != null)
+            {
+                Navigation.RemovePage(p);
+            }
+        }
+
+        private void ColumnDefinition_SizeChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
